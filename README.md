@@ -20,7 +20,7 @@
   - Show feeds you are following
 
 - **Posts Aggregation & Browsing**
-  - **fetch** posts continuously from followed feeds
+  - **Fetch** posts continuously from followed feeds
   - **View** the latest posts
   - **Filter** posts by keyword
   - **Sort** posts by published date (`asc` or `desc`)
@@ -159,4 +159,3 @@ npm run start bookmarks             # List all bookmarkes
 - Use bookmarks to save your favorite posts.  
 ```
 
-تحطه مباشرة في ملف `README.md` على مشروعك في GitHub ويكون جاهز 🚀
