@@ -1,6 +1,4 @@
-تمام 👌 هذا هو ملف **README.md** جاهز للنسخ واللصق على GitHub:
 
-```markdown
 # 🐊 Gator - Advanced RSS Feed Aggregator CLI
 
 **Gator** is a powerful CLI tool to collect, manage, and browse RSS feeds directly from your terminal. Supports multiple users, filtering, sorting, pagination, search, and bookmarks.
@@ -22,8 +20,8 @@
   - Show feeds you are following
 
 - **Posts Aggregation & Browsing**
-  - Continuously fetch posts from followed feeds
-  - View the latest posts
+  - **fetch** posts continuously from followed feeds
+  - **View** the latest posts
   - **Filter** posts by keyword
   - **Sort** posts by published date (`asc` or `desc`)
   - **Pagination** with `--page` and `--limit`
@@ -47,7 +45,7 @@
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/gator.git
+git clone https://github.com/jumanasaif/Gator-BlogAggregator.git
 cd gator
 ```
 
@@ -99,43 +97,48 @@ npm run start unfollow "<url>"          # Unfollow a feed
 npm run start following                 # Show feeds you follow
 ```
 
+### Aggregator
+
+```bash
+npm run start agg <interval>          # Start continuous aggregation (e.g., 30s)
+```
+
 ### Browse Posts
 
 ```bash
-npm run start browse [options]
+npm run start -- browse [options]    #Show latest posts (default 2)
 ```
 
 Options for browse:
 
-| Option    | Description                                | Example                     |
-|-----------|--------------------------------------------|-----------------------------|
-| --limit   | Number of posts to show                    | --limit=5                   |
-| --sort    | Sort posts by date: asc or desc            | --sort=asc                  |
-| --filter  | Filter posts by keyword in title/description | --filter=typescript        |
-| --page    | Show specific page                         | --page=2                    |
+| Option    | Description                                  | Example                     |
+|-----------|----------------------------------------------|-----------------------------|
+| --limit   | Number of posts to show                      | --limit=5                   |
+| --sort    | Sort posts by date: asc or desc              | --sort=asc                  |
+| --filter  | Filter posts by keyword in title/description | --filter=AI                 |
+| --page    | Show specific page                           | --page=2                    |
 
 **Example:**
 
 ```bash
-npm run start browse --limit=5 --sort=asc --filter=typescript --page=2
+npm run start -- browse --limit=5 --sort=asc --filter=AI --page=2
 ```
 
 ### Search Posts
 
 ```bash
-npm run start search "<keyword>"
+npm run start search "<keyword>"     # Fuzzy search in title and description, Displays all matching posts with URLs  
 ```
 
-- Fuzzy search in title and description  
-- Displays all matching posts with URLs  
+ 
 
 ### Bookmark Posts
 
 ```bash
-npm run start bookmark <post_id>
+npm run start bookmark <post_url>   # Save posts for later quick access
+npm run start bookmarks             # List all bookmarkes
 ```
 
-- Save posts for later quick access  
 
 ---
 
@@ -145,7 +148,7 @@ npm run start bookmark <post_id>
 - RSS feeds are fetched and parsed using **fast-xml-parser**.  
 - Posts are linked to users via the **feedFollows** table.  
 - Users can browse, search, filter, sort, paginate, and bookmark posts.  
-- The `agg` command continuously fetches new posts from followed feeds.  
+- The `agg` command continuously fetches new posts from followed feeds.
 
 ---
 
